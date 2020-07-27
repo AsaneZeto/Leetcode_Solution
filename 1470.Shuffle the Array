@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<int> shuffle(vector<int>& nums, int n) {
+        vector<int> answer;
+        for(int i = 0 ; i < (2*n)  ; i++){
+            if((i%2)==0){
+                answer.push_back(nums[i/2]);
+            }
+            else{
+                answer.push_back(nums[n+(i/2)]);
+            }
+        }
+        return answer;
+    }
+};
